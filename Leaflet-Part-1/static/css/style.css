@@ -13,10 +13,11 @@ html {
 .info.legend {
   background: white;
   padding: 6px 8px;
-  font: 14px Arial, sans-serif;
-  border-radius: 5px;
+  font: 14px;
+  border-radius: 7px;
+  border: 1px solid black; 
 }
-.info.legend i {
+.info.legend legend{
   width: 40px;
   height: 18px;
   float: left;

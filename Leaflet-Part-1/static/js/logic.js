@@ -80,11 +80,13 @@ legend.onAdd = function () {
     let div = L.DomUtil.create('div', 'info legend');
     let depths = [0, 10, 30, 50, 70, 90];
 
-    div.innerHTML += "<h4>Depth (km)</h4>";
+    div.innerHTML += "<h3>Depth (km)</h3>";
     // Set legends colors
     depths.forEach((depth, index) => {
         let nextDepth = depths[index + 1];
-        let label = '<i style="background:' + getColor(depth + 1) + '"></i> ' + depth;
+        
+        // Could not get the colors to line up with the legend when I tried to add additional formatting in here and the .css file.
+        let label = '<legend style="background:' + getColor(depth + 1) + '"></legend> ' + depth;
         
         if (nextDepth) {
           label += '-' + nextDepth + '<br>';
